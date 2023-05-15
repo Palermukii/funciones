@@ -5,20 +5,20 @@
 #include <time.h>
 
 int dado() {
-    srand(time(NULL));
     return rand() % 6 + 1;
 }
-int dadodos() {
-    srand(time(NULL));
-    return rand() % 6 + 1;
 
+int dadodos() {
+    return rand() % 6 + 1;
 }
 int suma(){
+    srand(time(NULL));
  return dado() + dadodos();
 }
 
 
 int main() {
+    srand(time(NULL));
     printf("El dado uno es de %d\n", dado());
     printf("El dado dos es de %d\n", dadodos());
     printf("La suma de los dados es de %d\n", suma());
