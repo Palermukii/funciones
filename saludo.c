@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void saludo(char name) {
-    printf("Hola %s\n", name);
+void saludo(char *nombre) {
+    printf("Hola %s\n", nombre);
 }
-int main(int argc, char *argv[]) {
-    char name = atoi(argv[1]);
-    saludo(name);
+int main(int argc, char *argv[]){
+    char *nombre = argv[1];
+    saludo(nombre);
 }
