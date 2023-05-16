@@ -1,18 +1,20 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 #include <math.h>
 
-int fx(int O){
-return (cos(O)) * (cos(O)) + (sen(O)) * (sen(O)) ; 
-
+double calcularFuncion(double theta) {
+    double cos2 = pow(cos(theta), 2);
+    double sin2 = pow(sin(theta), 2);
+    double resultado = cos2 + sin2;
+    return resultado;
 }
 
-int main(int argc, char argv[]){
+int main() {
+    double theta;
+    printf("Ingrese el valor de theta en radianes: ");
+    scanf("%lf", &theta);
 
-int O = atoi(argv[1]); 
+    double resultado = calcularFuncion(theta);
+    printf("El resultado de f(theta) es: %.2lf\n", resultado);
 
-
-printf("F(O) = (cos(O)) (cos(O)) + (sen(O)) * (sen(O)) = %d\n", fx(O));
-
+    return 0;
 }
