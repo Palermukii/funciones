@@ -1,20 +1,30 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+#include <time.h>
 #include <math.h>
 
-double calcularFuncion(double theta) {
-    double cos2 = pow(cos(theta), 2);
-    double sin2 = pow(sin(theta), 2);
-    double resultado = cos2 + sin2;
-    return resultado;
+int tof(int a, int b){
+
+int T = 1
+int F = 0
+
+if (a == b) {
+return T;
 }
 
-int main() {
-    double theta;
-    printf("Ingrese el valor de theta en radianes: ");
-    scanf("%lf", &theta);
+if (a != b) {
+return F;
+}
 
-    double resultado = calcularFuncion(theta);
-    printf("El resultado de f(theta) es: %.2lf\n", resultado);
+}
 
-    return 0;
+
+
+int main(int argc, char *argv[]) {
+
+int a = atoi(argv[1]);
+int b = atoi(argv[2]);
+
+printf("%d\n", tof(a, b))
 }
